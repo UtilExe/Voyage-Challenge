@@ -88,10 +88,9 @@ The Swagger documentation for the Mock API is available at `http://localhost:300
 
 Beyond the immediate tasks, prepare to discuss your high-level vision for this application's future.
 
-1.  **Architectural Scalability:** Imagine two new teams (e.g., "Logistics" and "Finance") need to add their own complex modules to this dashboard. How would you evolve the architecture to support multiple teams contributing to a single frontend application?
-2.  **Release & CI/CD Strategy:** How would you set up a CI/CD pipeline for this project using GitHub Actions? How would you implement a release strategy (e.g., using feature flags) to safely deploy the new "Create Voyage" feature without affecting all users at once?
-3.  **Team Enablement:** How would you document the patterns and decisions made in these tasks to effectively onboard a new mid-level developer to the team? What would you focus on in your code reviews beyond "does it work?"
-4.  **AI-Assisted Development:** Our organization is embracing a wide range of AI development assistants, including code completion tools like GitHub Copilot and beyond. As a lead, how would you integrate these tools into your team's workflow? Please discuss:
+1.  **Release & CI/CD Strategy:** How would you set up a CI/CD pipeline for this project using GitHub Actions? How would you implement a release strategy (e.g., using feature flags) to safely deploy the new "Create Voyage" feature without affecting all users at once?
+2.  **Team Enablement:** How would you document the patterns and decisions made in these tasks to effectively onboard a new mid-level developer to the team? What would you focus on in your code reviews beyond "does it work?"
+3.  **AI-Assisted Development:** Our organization is embracing a wide range of AI development assistants, including code completion tools like GitHub Copilot and beyond. As a lead, how would you integrate these tools into your team's workflow? Please discuss:
     * **Opportunities:** Where do you see the biggest productivity gains for your team?
     * **Challenges & Risks:** What are the primary challenges this introduces (e.g., code quality, consistency, potential for junior developers to misunderstand the output)?
     * **Quality Control:** How would you adapt your code review and testing processes to effectively govern AI-generated code and ensure its reliability and maintainability?
