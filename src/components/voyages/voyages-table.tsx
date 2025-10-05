@@ -19,6 +19,7 @@ import {
   TableHeader,
   TableRow,
 } from "~/components/ui/table";
+import { UnitTypesPopover } from "./unit-types-popover";
 
 export function VoyagesTable() {
   const { data: voyages } = useQuery<ReturnType>({
@@ -57,6 +58,7 @@ export function VoyagesTable() {
           <TableHead>Port of loading</TableHead>
           <TableHead>Port of discharge</TableHead>
           <TableHead>Vessel</TableHead>
+          <TableHead>Unit Types</TableHead>
           <TableHead>&nbsp;</TableHead>
         </TableRow>
       </TableHeader>
@@ -75,6 +77,9 @@ export function VoyagesTable() {
             <TableCell>{voyage.portOfLoading}</TableCell>
             <TableCell>{voyage.portOfDischarge}</TableCell>
             <TableCell>{voyage.vessel.name}</TableCell>
+            <TableCell>
+              <UnitTypesPopover unitTypes={voyage.unitTypes} />
+            </TableCell>
             <TableCell>
               <Button
                 onClick={() => handleDelete(voyage.id)}
