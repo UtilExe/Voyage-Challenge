@@ -7,6 +7,7 @@ import {
   useQueryClient,
 } from "@tanstack/react-query";
 import { format } from "date-fns";
+import { toast } from "sonner";
 import type { ReturnType } from "~/app/api/voyage/getAll/route";
 import { fetchData } from "~/lib/utils";
 import { Button } from "~/components/ui/button";
@@ -39,9 +40,13 @@ export function VoyagesTable() {
       }
     },
     onSuccess: async () => {
+      toast.success("Voyage deleted successfully");
       await queryClient.invalidateQueries([
         "voyages",
       ] as InvalidateQueryFilters);
+    },
+    onError: () => {
+      toast.error("Failed to delete voyage. Please try again.");
     },
   });
 
