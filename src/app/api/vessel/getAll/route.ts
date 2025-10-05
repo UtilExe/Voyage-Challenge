@@ -5,9 +5,13 @@ import type { Prisma } from "@prisma/client";
 // Assuming the type for a single vessel object.
 type Vessel = Prisma.VesselGetPayload<Record<string, never>>;
 
-//export type VesselsType = { value: string; label: string }[];
+// Return type for vessel dropdown
+export type VesselOption = {
+  value: string;
+  label: string;
+};
 
-export type VesselsType = [Vessel];
+export type ReturnType = VesselOption[];
 
 /**
  * @swagger
