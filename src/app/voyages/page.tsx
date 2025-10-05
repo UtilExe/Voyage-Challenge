@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { VoyagesTable } from "~/components/voyages-table";
+import { CreateVoyageSheet } from "~/components/voyages/create-voyage-sheet";
+import { VoyagesTable } from "~/components/voyages/voyages-table";
 
 export const metadata: Metadata = {
   title: "Voyages | DFDS",
@@ -7,5 +8,12 @@ export const metadata: Metadata = {
 };
 
 export default function VoyagesPage() {
-  return <VoyagesTable />;
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between mt-6">
+        <CreateVoyageSheet />
+      </div>
+      <VoyagesTable />
+    </div>
+  );
 }

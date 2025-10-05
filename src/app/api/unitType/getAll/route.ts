@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 import { prisma } from "~/server/db";
+import type { Prisma } from "@prisma/client";
+
+export type ReturnType = Prisma.UnitTypeGetPayload<Record<string, never>>[];
 
 /**
  * @swagger

@@ -7,8 +7,8 @@ import {
   useQueryClient,
 } from "@tanstack/react-query";
 import { format } from "date-fns";
+import type { ReturnType } from "~/app/api/voyage/getAll/route";
 import { fetchData } from "~/lib/utils";
-import type { ReturnType } from "../app/api/voyage/getAll/route";
 import { Button } from "~/components/ui/button";
 import { TABLE_DATE_FORMAT } from "~/constants";
 import {
